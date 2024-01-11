@@ -1,0 +1,74 @@
+/* colors=
+lite  green:#7ed56f
+medum green:#55c67a
+darck green:#28b485 */
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.body {
+    font-family: "lato", sans-serif;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right top, #7ed56fb0, #28b485b8), url(../img/pexels-matthew-montrone-1324803.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.heading-primery {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primery-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400px;
+    letter-spacing: 34px;
+}
+
+
+
+
+.heading-primery-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 400px;
+    letter-spacing: 20px;
+
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
