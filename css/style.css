@@ -28,7 +28,7 @@ darck green:#28b485 */
     background-image: linear-gradient(to right top, #7ed56fb0, #28b485b8), url(../img/pexels-matthew-montrone-1324803.jpg);
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
     position: relative;
 
 }
@@ -46,6 +46,7 @@ darck green:#28b485 */
 .heading-primery {
     color: #fff;
     text-transform: uppercase;
+    backface-visibility: hidden;
 }
 
 .heading-primery-main {
@@ -53,6 +54,10 @@ darck green:#28b485 */
     font-size: 60px;
     font-weight: 400px;
     letter-spacing: 34px;
+
+    animation-name: moveInleft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
 }
 
 
@@ -63,12 +68,48 @@ darck green:#28b485 */
     font-size: 20px;
     font-weight: 400px;
     letter-spacing: 20px;
+    animation-name: moveInright;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
 
 }
 
-.text-box{
+.text-box {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
+}
+
+@keyframes moveInleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(180deg);
+    }
+
+    80% {
+        transform: translateX(10px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);  
+    }
+}
+
+@keyframes moveInright {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
