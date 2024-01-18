@@ -47,6 +47,7 @@ darck green:#28b485 */
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primery-main {
@@ -56,7 +57,7 @@ darck green:#28b485 */
     letter-spacing: 34px;
 
     animation-name: moveInleft;
-    animation-duration: 1.5s;
+    animation-duration: 1.3s;
     animation-timing-function: ease-out;
 }
 
@@ -79,12 +80,13 @@ darck green:#28b485 */
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 @keyframes moveInleft {
     0% {
         opacity: 0;
-        transform: translateX(-100%) rotate(180deg);
+        transform: translateX(-100%);
     }
 
     80% {
@@ -94,7 +96,7 @@ darck green:#28b485 */
 
     100% {
         opacity: 1;
-        transform: translate(0);  
+        transform: translate(0) skewY(180deg);
     }
 }
 
@@ -112,4 +114,71 @@ darck green:#28b485 */
         opacity: 1;
         transform: translate(0);
     }
+}
+
+@keyframes moveInbottom {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0) ;
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px  rgba(0 , 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px  rgba(0 , 0, 0, .2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after{
+    background-color: #fff;
+}
+
+.btn:hover::after{
+    transform: scale(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+
+
+.btn-animated{
+    animation: moveInbottom .5s ease-out 1s;
+    animation-fill-mode: backwards;
 }
